@@ -62,7 +62,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
             $this->app->getDocument()->setMetaData('og:image', $image);
             $this->app->getDocument()->setMetaData('twitter:image', $image);
         }
-        
+
     }
     
     /**
@@ -110,7 +110,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
             return null;
         }
 
-        $db = \JFactory::getDbo();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true);
         $query->select($db->qn('miniatura'))->from($db->qn('adm_cloner_listas'))->where($db->qn('id_lista') . ' = ' . $db->q($listId));
         $db->setQuery($query);
