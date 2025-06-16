@@ -18,7 +18,6 @@ use Joomla\CMS\Factory;
  * 
  * @package     	Joomla.Plugin
  * @subpackage  	Fabrik.list.metadata
- * @since       	4.0
  */
 class PlgFabrik_ListMetadata extends PlgFabrik_List {
 
