@@ -1,0 +1,9 @@
+</extension>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+	<fields addfieldpath="/administrator/components/com_fabrik/models/fields" name="params">
+        <fieldset label="PLG_FABRIK_LIST_METADATA_OPTIONS" name="plg-list-metadata">
+                <field type="helplink" url="PLG_FABRIK_LIST_METADATA_HELP_SERVER" />
+        </fieldset>
+    </fields>
+</form>
