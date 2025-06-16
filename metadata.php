@@ -124,8 +124,6 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
                 return Uri::root() . ltrim($thumb, '/');
             }
         }
-
-        return null;
     }
 
 }
