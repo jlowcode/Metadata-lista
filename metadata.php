@@ -118,7 +118,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $thumb = $db->loadResult();
 
         if ($thumb) {
-        $physicalPath = JPATH_SITE . '/' . ltrim($thumb, '/');
+            $physicalPath = JPATH_SITE . '/' . ltrim($thumb, '/');
 
             if (file_exists($physicalPath)) {
                 return Uri::root() . ltrim($thumb, '/');
