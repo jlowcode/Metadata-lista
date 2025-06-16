@@ -12,6 +12,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 use Joomla\CMS\Factory;
+use \Joomla\CMS\Uri\Uri;
 
 /**
  * 	Plugin that displays relevant information from a list when its URL is shared
