@@ -97,9 +97,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
     }
 
     /**
-     * Retrieves the URL path of the image thumbnail if it exists on the server.
-     * 
-     * @return  string|null  The full URL to the image thumbnail or null if not found.
+     * @return  string
      */
     public function getImagePath()
     {
