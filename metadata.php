@@ -114,13 +114,13 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $query = $db->getQuery(true);
         $query->select($db->qn('miniatura'))->from($db->qn('adm_cloner_listas'))->where($db->qn('id_lista') . ' = ' . $db->q($listId));
         $db->setQuery($query);
-        $miniatura = $db->loadResult();
+        $thumb = $db->loadResult();
 
-        if ($miniatura) {
-        $physicalPath = JPATH_SITE . '/' . ltrim($miniatura, '/');
+        if ($thumb) {
+        $physicalPath = JPATH_SITE . '/' . ltrim($thumb, '/');
 
             if (file_exists($physicalPath)) {
-                return \JUri::root() . ltrim($miniatura, '/');
+                return \JUri::root() . ltrim($thumb, '/');
             }
         }
 
