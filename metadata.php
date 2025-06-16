@@ -1,6 +1,6 @@
 <?php
 /**
- * MetaDatalist Element
+ * List's Metadata
  *
  * @package     Joomla.Plugin
  * @subpackage  Fabrik.list.metadata
