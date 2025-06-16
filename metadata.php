@@ -106,7 +106,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $listId = $table->get('id');
 
         if (!$listId) {
-            return null;
+            return;
         }
 
         $db = Factory::getContainer()->get('DatabaseDriver');
