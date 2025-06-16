@@ -8,7 +8,7 @@
 	<authorEmail>contact@jlowcode.org</authorEmail>
 	<authorUrl>www.jlowcode.org</authorUrl>
 	<version>1.0.0</version>
-	<description></description>
+	<description>PLG_FABRIK_LIST_METADATA_DESCRIPTION</description>
 	<files>
 		<filename plugin="metadata">metadata.php</filename>
 		<filename>index.html</filename>
