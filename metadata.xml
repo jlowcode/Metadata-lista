@@ -2,7 +2,7 @@
 <extension group="fabrik_list" method="upgrade" type="plugin" version="4">
 	<name>PLG_FABRIK_LIST_METADATA</name>
 	<author>Jlowcode Organization</author>
-	<creationDate>Juno 2025</creationDate>
+	<creationDate>June 2025</creationDate>
 	<copyright>Copyright (C) 2025 Jlowcode Org - All rights reserved.</copyright>
 	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>contact@jlowcode.org</authorEmail>
