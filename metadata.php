@@ -62,11 +62,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
             $this->app->getDocument()->setMetaData('og:image', $image);
             $this->app->getDocument()->setMetaData('twitter:image', $image);
         }
-
-        return [
-            'title' => $title,
-            'description' => $description
-        ];
+        
     }
     
     /**
