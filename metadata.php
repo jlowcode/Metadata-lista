@@ -32,7 +32,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      *
      * @param   	String 		$view 		View list/form
      *
-     * @return  	Bool
+     * @return  	bool
      */
     public function canView($view = 'list') 
     {
@@ -44,7 +44,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * Increments the access (views) counter each time the record is loaded.
      * 
-     * @return 		Void
+     * @return 		void
     */
     public function onLoadData(&$args) 
     {
