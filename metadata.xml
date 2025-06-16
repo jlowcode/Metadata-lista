@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <extension group="fabrik_list" method="upgrade" type="plugin" version="4">
-	<name>PLG_FABRIK_LIST_META_DATA</name>
+	<name>PLG_FABRIK_LIST_METADATA</name>
 	<author>Jlowcode Organization</author>
 	<creationDate>May 2025</creationDate>
 	<copyright>Copyright (C) 2025 Jlowcode Org - All rights reserved.</copyright>
