@@ -40,8 +40,6 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
     }
 
     /**
-     * 
-     * 
      * Increments the access (views) counter each time the record is loaded.
      * 
      * @return 		void
@@ -91,12 +89,14 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      */
     public function setTwitterTags($title, $description)
     {
-        $this->app->getDocument()->setMetaData('twitter:card', 'summary');
+        $this->app->getDocument()->setMetaData('twitter:card', 'summary_large_image');
         $this->app->getDocument()->setMetaData('twitter:title', strip_tags($title));
         $this->app->getDocument()->setMetaData('twitter:description', strip_tags($description));
     }
 
     /**
+     * Retrieves the URL path of the image thumbnail if it exists on the server.
+     * 
      * @return  string
      */
     public function getImagePath()
