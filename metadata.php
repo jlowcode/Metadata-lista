@@ -55,7 +55,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
 
         $this->setOgTags($title, $description, $image);
         $this->setTwitterTags($title, $description, $image);
-        $this->app->getDocument()->setMetaData('description', strip_tags($description));
+        $this->setTags($title, $description, $image);
 
     }
     
