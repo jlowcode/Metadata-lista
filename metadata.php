@@ -101,6 +101,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      */
     public function getImagePath()
     {
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $model = $this->getModel();
         $table = $model->getTable();
         $listId = $table->get('id');
@@ -109,7 +110,6 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
             return;
         }
 
-        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true);
         $query->select($db->qn('miniatura'))->from($db->qn('adm_cloner_listas'))->where($db->qn('id_lista') . ' = ' . $db->q($listId));
         $db->setQuery($query);
