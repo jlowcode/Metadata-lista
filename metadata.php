@@ -51,16 +51,11 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
 
         $title = $table->get('label');
         $description = $table->get('introduction');
-
-        $this->setOgTags($title, $description);
-        $this->setTwitterTags($title, $description);
-        $this->app->getDocument()->setMetaData('description', strip_tags($description));
-
         $image = $this->getImagePath();
-        if ($image) {
-            $this->app->getDocument()->setMetaData('og:image', $image);
-            $this->app->getDocument()->setMetaData('twitter:image', $image);
-        }
+
+        $this->setOgTags($title, $description, $image);
+        $this->setTwitterTags($title, $description, $image);
+        $this->app->getDocument()->setMetaData('description', strip_tags($description));
 
     }
     
@@ -69,6 +64,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * @param   string  $title        The title to set in og:title
      * @param   string  $description  The description to set in og:description
+     * @param   string  $image        The image URL to set in og:image
      * 
      * @return  void
      */
@@ -77,6 +73,10 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $this->app->getDocument()->setMetaData('og:title', strip_tags($title));
         $this->app->getDocument()->setMetaData('og:description', strip_tags($description));
         $this->app->getDocument()->setMetaData('og:type', 'website');
+
+        if ($image) {
+            $this->app->setMetaData('og:image', $image);
+        }
     }
 
     /**
@@ -84,14 +84,19 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * @param   string  $title        The title to set in twitter:title
      * @param   string  $description  The description to set in twitter:description
+     * @param   string  $image        The image URL to set in twitter:image
      * 
      * @return  void
      */
-    public function setTwitterTags($title, $description)
+    public function setTwitterTags($title, $description, $image)
     {
         $this->app->getDocument()->setMetaData('twitter:card', 'summary_large_image');
         $this->app->getDocument()->setMetaData('twitter:title', strip_tags($title));
         $this->app->getDocument()->setMetaData('twitter:description', strip_tags($description));
+
+        if ($image) {
+            $this->app->getDocument()->setMetaData('twitter:image', $image);
+        }
     }
 
     /**
