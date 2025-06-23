@@ -68,7 +68,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * @return  void
      */
-    public function setOgTags($title, $description)
+    private function setOgTags($title, $description, $image)
     {
         $this->app->getDocument()->setMetaData('og:title', strip_tags($title));
         $this->app->getDocument()->setMetaData('og:description', strip_tags($description));
@@ -88,7 +88,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * @return  void
      */
-    public function setTwitterTags($title, $description, $image)
+    private function setTwitterTags($title, $description, $image)
     {
         $this->app->getDocument()->setMetaData('twitter:card', 'summary_large_image');
         $this->app->getDocument()->setMetaData('twitter:title', strip_tags($title));
@@ -108,7 +108,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * @return  void
      */
-    public function setTags($title, $description, $image)
+    private function setTags($title, $description, $image)
     {
         $this->app->getDocument()->setMetaData('title', strip_tags($title));
         $this->app->getDocument()->setMetaData('description', strip_tags($description));  
@@ -123,7 +123,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      * 
      * @return  string
      */
-    public function getImagePath()
+    private function getImagePath()
     {
         $db = Factory::getContainer()->get('DatabaseDriver');
         $model = $this->getModel();
