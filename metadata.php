@@ -95,6 +95,25 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
     }
 
     /**
+     * Sets the standard meta tags for page title, description, and image.
+     * 
+     * @param   string  $title        The title to set in meta title
+     * @param   string  $description  The description to set in meta description
+     * @param   string  $image        The image URL to set in meta image
+     * 
+     * @return  void
+     */
+    public function setTags($title, $description, $image)
+    {
+        $this->app->getDocument()->setMetaData('title', strip_tags($title));
+        $this->app->getDocument()->setMetaData('description', strip_tags($description));  
+
+        if($image) {
+            $this->app->getDocument()->setMetaData('image', $image);
+        }
+    }
+
+    /**
      * Retrieves the URL path of the image thumbnail if it exists on the server.
      * 
      * @return  string
