@@ -56,7 +56,6 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $this->setOgTags($title, $description, $image);
         $this->setTwitterTags($title, $description, $image);
         $this->setTags($title, $description, $image);
-
     }
     
     /**
@@ -75,7 +74,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $this->app->getDocument()->setMetaData('og:type', 'website');
 
         if ($image) {
-            $this->app->setMetaData('og:image', $image);
+            $this->app->getDocument()->setMetaData('og:image', $image);
         }
     }
 
@@ -126,6 +125,7 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
     private function getImagePath()
     {
         $db = Factory::getContainer()->get('DatabaseDriver');
+
         $model = $this->getModel();
         $table = $model->getTable();
         $listId = $table->get('id');
@@ -147,5 +147,4 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
             }
         }
     }
-
 }
