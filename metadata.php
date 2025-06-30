@@ -49,8 +49,8 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
         $model = $this->getModel();
         $table = $model->getTable();
 
-        $title = $table->get('label');
-        $description = $table->get('introduction');
+        $title = strip_tags($table->get('label'));
+        $description = strip_tags($table->get('introduction'));
         $image = $this->getImagePath();
 
         $this->setOgTags($title, $description, $image);
