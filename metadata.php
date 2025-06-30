@@ -69,8 +69,8 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      */
     private function setOgTags($title, $description, $image)
     {
-        $this->app->getDocument()->setMetaData('og:title', strip_tags($title), 'property');
-        $this->app->getDocument()->setMetaData('og:description', strip_tags($description), 'property');
+        $this->app->getDocument()->setMetaData('og:title', $title, 'property');
+        $this->app->getDocument()->setMetaData('og:description', $description, 'property');
         $this->app->getDocument()->setMetaData('og:type', 'website', 'property');
 
         if ($image) {
@@ -90,8 +90,8 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
     private function setTwitterTags($title, $description, $image)
     {
         $this->app->getDocument()->setMetaData('twitter:card', 'summary_large_image', 'property');
-        $this->app->getDocument()->setMetaData('twitter:title', strip_tags($title), 'property');
-        $this->app->getDocument()->setMetaData('twitter:description', strip_tags($description), 'property');
+        $this->app->getDocument()->setMetaData('twitter:title', $title, 'property');
+        $this->app->getDocument()->setMetaData('twitter:description', $description, 'property');
 
         if ($image) {
             $this->app->getDocument()->setMetaData('twitter:image', $image, 'property');
@@ -109,8 +109,8 @@ class PlgFabrik_ListMetadata extends PlgFabrik_List {
      */
     private function setTags($title, $description, $image)
     {
-        $this->app->getDocument()->setMetaData('title', strip_tags($title), 'property');
-        $this->app->getDocument()->setMetaData('description', strip_tags($description), 'property');  
+        $this->app->getDocument()->setMetaData('title', $title, 'property');
+        $this->app->getDocument()->setMetaData('description', $description, 'property');  
 
         if($image) {
             $this->app->getDocument()->setMetaData('image', $image, 'property');
